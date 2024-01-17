@@ -44,6 +44,7 @@ export const users = myPgTable("user", {
   emailVerified: timestamp("emailVerified", {
     mode: "date",
   }).default(sql`CURRENT_TIMESTAMP(3)`),
+  password: varchar("password", {length: 255}),
   image: varchar("image", { length: 255 }),
 });
 
